@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>ShareMyUrl.co</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Share URL Generator for Facebook, Twitter, and Pinterest">
+		<meta name="description" content="Share URL Generator for Facebook, Twitter, Pinterest, and Tumblr">
 		<meta name="author" content="Jonathon Hill">
 
 		<!-- Le styles -->
@@ -71,6 +71,10 @@
 </head>
 <body>
 
+	<a href="https://github.com/compwright/sharemyurl" target="_blank">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" src="//s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+	</a>
+
 	<div class="wrap">
 		<div class="container">
 		
@@ -79,101 +83,120 @@
 				<p>Share URL Generator for Facebook, Twitter, and Pinterest</p>
 			</div>
 				
-		    <div class="tabbable">
-		    
-		    	<ul class="nav nav-tabs">
-		    		<li class="active"><a href="#tab1" data-toggle="tab"><img src="glyphicons/glyphicons_410_facebook.png" alt="Facebook"> Facebook</a></li>
-		    		<li><a href="#tab2" data-toggle="tab"><img src="glyphicons/glyphicons_411_twitter.png" alt="Twitter"> Twitter</a></li>
-		    		<li><a href="#tab3" data-toggle="tab"><img src="glyphicons/glyphicons_380_pinterest.png" alt="Pinterest"> Pinterest</a></li>
-		    	</ul>
-		    
-		    	<div class="tab-content">
-		    		<div class="tab-pane active" id="tab1">
-		    			<form id="facebook">
-		    			    <fieldset>
-		    			    
-		    			    	<label>Application ID*</label>
-		    			    	<input type="text" name="app_id" placeholder="1234567890" />
-		    			    	
-		    			    	<label>Redirect URL*</label>
-		    			    	<input class="span4" type="text" name="redirect_uri" placeholder="http://www.example.com">
-		    			    	
-		    			    	<label>Page URL*</label>
-		    			    	<input class="span4" type="text" name="link" placeholder="http://www.example.com">
-		    			    	
-		    			    	<label>Page URL Name and Caption</label>
-		    			    	<input type="text" name="name" placeholder="Name (example.com)">
-		    			    	<input type="text" name="caption" placeholder="Caption (Example Site)">
-		    			    	
-		    			    	<label>Image URL <small class="muted">recommended</small></label>
-		    			    	<input class="span4" type="text" name="picture" placeholder="http://www.example.com/logo.png">
-		    			    	
-		    			    	<label>Media URL <small class="muted">swf or mp3</small></label>
-		    			    	<input class="span4" type="text" name="source" placeholder="http://www.example.com/video.swf">
-		    			    	
-		    			    	<label>Post Description</label>
-		    			    	<textarea name="description" class="span6" rows="3"></textarea>
+			<div class="tabbable">
+			
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab"><img src="glyphicons/glyphicons_410_facebook.png" alt="Facebook"> Facebook</a></li>
+					<li><a href="#tab2" data-toggle="tab"><img src="glyphicons/glyphicons_411_twitter.png" alt="Twitter"> Twitter</a></li>
+					<li><a href="#tab3" data-toggle="tab"><img src="glyphicons/glyphicons_380_pinterest.png" alt="Pinterest"> Pinterest</a></li>
+					<li><a href="#tab4" data-toggle="tab"><img src="glyphicons/glyphicons_social_08_tumblr.png" alt="Tumblr"> Tumblr</a></li>
+				</ul>
+			
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab1">
+						<form id="facebook">
+							<fieldset>
+							
+								<label>Application ID*</label>
+								<input type="text" name="app_id" placeholder="1234567890" required>
+								
+								<label>Redirect URL*</label>
+								<input class="span4" type="text" name="redirect_uri" placeholder="http://www.example.com" required>
+								
+								<label>Page URL*</label>
+								<input class="span4" type="text" name="link" placeholder="http://www.example.com" required>
+								
+								<label>Page URL Name and Caption</label>
+								<input type="text" name="name" placeholder="Name (example.com)">
+								<input type="text" name="caption" placeholder="Caption (Example Site)">
+								
+								<label>Image URL <small class="muted">recommended</small></label>
+								<input class="span4" type="text" name="picture" placeholder="http://www.example.com/logo.png">
+								
+								<label>Media URL <small class="muted">swf or mp3</small></label>
+								<input class="span4" type="text" name="source" placeholder="http://www.example.com/video.swf">
+								
+								<label>Post Description</label>
+								<textarea name="description" class="span6" rows="3"></textarea>
 					
-		    			    </fieldset>
-		    			    <a rel="facebook" href="#" target="_blank" class="btn btn-inverse disabled">Facebook Share URL</a>
-		    			    <a href="https://developers.facebook.com/docs/reference/dialogs/feed/" target="_blank" class="btn">Documentation</a>
-		    			</form>
-		    		</div>
-		    		<div class="tab-pane" id="tab2">
-		    			<form id="twitter">
-		    			    <fieldset>
-		    			    
-		    			    	<label>Page URL*</label>
-		    			    	<input class="span4" type="text" name="url" placeholder="http://www.example.com">
-		    			    	
-		    			    	<label>Tweet Text*</label>
-		    			    	<textarea name="text" class="span6" rows="3"></textarea>
+							</fieldset>
+							<a rel="facebook" href="#" target="_blank" class="btn btn-inverse disabled">Facebook Share URL</a>
+							<a href="https://developers.facebook.com/docs/reference/dialogs/feed/" target="_blank" class="btn">Documentation</a>
+						</form>
+					</div>
+					<div class="tab-pane" id="tab2">
+						<form id="twitter">
+							<fieldset>
+							
+								<label>Page URL*</label>
+								<input class="span4" type="text" name="url" placeholder="http://www.example.com" required>
+								
+								<label>Tweet Text*</label>
+								<textarea name="text" class="span6" rows="3" required></textarea>
 		
-		    			    	<label>Hashtags <small class="muted">comma-separated list, no spaces, no hashes (#)</small></label>
-		    			    	<input type="text" name="hashtags" class="span6">
+								<label>Hashtags <small class="muted">comma-separated list, no spaces, no hashes (#)</small></label>
+								<input type="text" name="hashtags" class="span6">
 		
-		    			    </fieldset>
-		    			    <a rel="twitter" href="#" target="_blank" class="btn btn-inverse disabled">Twitter Share URL</a>
-		    			    <a href="https://dev.twitter.com/docs/intents" target="_blank" class="btn">Documentation</a>
-		    			</form>
-		    		</div>
-		    		<div class="tab-pane" id="tab3">
-		    			<form id="pinterest">
-		    			    <fieldset>
-		    			    
-		    			    	<label>Page URL*</label>
-		    			    	<input class="span4" type="text" name="url" placeholder="http://www.example.com">
-		    			    	
-		    			    	<label>Image URL*</label>
-		    			    	<input type="text" name="media" class="span6" placeholder="http://www.example.com/image.jpg">
-		    			    	
-		    			    	<label>Description*</label>
-		    			    	<textarea name="description" class="span6" rows="3"></textarea>
+							</fieldset>
+							<a rel="twitter" href="#" target="_blank" class="btn btn-inverse disabled">Twitter Share URL</a>
+							<a href="https://dev.twitter.com/docs/intents" target="_blank" class="btn">Documentation</a>
+						</form>
+					</div>
+					<div class="tab-pane" id="tab3">
+						<form id="pinterest">
+							<fieldset>
+							
+								<label>Page URL*</label>
+								<input class="span4" type="text" name="url" placeholder="http://www.example.com" required>
+								
+								<label>Image URL*</label>
+								<input type="text" name="media" class="span6" placeholder="http://www.example.com/image.jpg" required>
+								
+								<label>Description*</label>
+								<textarea name="description" class="span6" rows="3" required></textarea>
 		
-		    			    </fieldset>
-		    			    <a rel="pinterest" href="#" target="_blank" class="btn btn-inverse disabled">Pinterest Share URL</a>
-		    			    <a href="http://pinterest.com/about/goodies/" target="_blank" class="btn">Documentation</a>
-		    			</form>
-		    		</div>
-		    	</div>
-		    </div>
+							</fieldset>
+							<a rel="pinterest" href="#" target="_blank" class="btn btn-inverse disabled">Pinterest Share URL</a>
+							<a href="http://pinterest.com/about/goodies/" target="_blank" class="btn">Documentation</a>
+						</form>
+					</div>
+					<div class="tab-pane active" id="tab4">
+						<form id="tumblr">
+							<fieldset>
+								
+								<label>Page URL*</label>
+								<input class="span4" type="text" name="url" placeholder="http://www.example.com" required>
+								
+								<label>Page URL Name and Description</label>
+								<input type="text" name="name" placeholder="Name (example.com)">
+								
+								<label>Post Description</label>
+								<textarea name="description" class="span6" rows="3"></textarea>
+					
+							</fieldset>
+							<a rel="tumblr" href="#" target="_blank" class="btn btn-inverse disabled">Tumblr Share URL</a>
+							<a href="http://www.tumblr.com/buttons" target="_blank" class="btn">Documentation</a>
+						</form>
+					</div>
+				</div>
+			</div>
 		
 		</div> <!-- /container -->
 	</div>
 	
 	<div id="footer">
-	    <div class="container">
-	    	<hr>
-	    	<p class="muted credit">
-	    		Copyright &copy; 2012 by <a href="http://jonathonhill.net" target="_blank">Jonathon Hill</a>
-	    	</p>
-	    </div>
+		<div class="container">
+			<hr>
+			<p class="muted credit">
+				Created by <a href="http://jonathonhill.net" target="_blank">Jonathon Hill</a>
+			</p>
+		</div>
 	</div>
 
 	<!-- Le javascript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		
@@ -190,6 +213,10 @@
 			pinterest: function(frm)
 			{
 				return 'http://www.pinterest.com/pin/create/button/?' + frm.serialize();
+			},
+			tumblr: function(frm)
+			{
+				return 'http://www.tumblr.com/share/link?' + frm.serialize();
 			}
 		};
 		
