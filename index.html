@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ShareMyUrl.co</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Share URL Generator for Facebook, Twitter, and Pinterest">
+		<meta name="author" content="Jonathon Hill">
+
+		<!-- Le styles -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+			.nav-tabs > li > a {
+				color:inherit;
+			}
+			a, a:hover { color: #333; }
+			.page-header { border:none; }
+		
+		
+			/* Sticky footer styles
+			-------------------------------------------------- */
+
+			html,
+			body {
+				height: 100%;
+				/* The html and body elements cannot have any padding or margin. */
+			}
+
+			/* Wrapper for page content to push down footer */
+			#wrap {
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				/* Negative indent footer by it's height */
+				margin: 0 auto -60px;
+			}
+
+			/* Set the fixed height of the footer here */
+			#push,
+			#footer {
+				height: 60px;
+			}
+
+			/* Lastly, apply responsive CSS fixes as necessary */
+			@media (max-width: 767px) {
+				#footer {
+					margin-left: -20px;
+					margin-right: -20px;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+			
+		</style>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="container">
+		
+			<div class="page-header">
+				<h1><a href="/">ShareMyUrl.co</a></h1>
+				<p>Share URL Generator for Facebook, Twitter, and Pinterest</p>
+			</div>
+				
+		    <div class="tabbable">
+		    
+		    	<ul class="nav nav-tabs">
+		    		<li class="active"><a href="#tab1" data-toggle="tab"><img src="glyphicons/glyphicons_410_facebook.png" alt="Facebook"> Facebook</a></li>
+		    		<li><a href="#tab2" data-toggle="tab"><img src="glyphicons/glyphicons_411_twitter.png" alt="Twitter"> Twitter</a></li>
+		    		<li><a href="#tab3" data-toggle="tab"><img src="glyphicons/glyphicons_380_pinterest.png" alt="Pinterest"> Pinterest</a></li>
+		    	</ul>
+		    
+		    	<div class="tab-content">
+		    		<div class="tab-pane active" id="tab1">
+		    			<form id="facebook">
+		    			    <fieldset>
+		    			    
+		    			    	<label>Application ID*</label>
+		    			    	<input type="text" name="app_id" placeholder="1234567890" />
+		    			    	
+		    			    	<label>Redirect URL*</label>
+		    			    	<input class="span4" type="text" name="redirect_uri" placeholder="http://www.example.com">
+		    			    	
+		    			    	<label>Page URL*</label>
+		    			    	<input class="span4" type="text" name="link" placeholder="http://www.example.com">
+		    			    	
+		    			    	<label>Page URL Name and Caption</label>
+		    			    	<input type="text" name="name" placeholder="Name (example.com)">
+		    			    	<input type="text" name="caption" placeholder="Caption (Example Site)">
+		    			    	
+		    			    	<label>Image URL <small class="muted">recommended</small></label>
+		    			    	<input class="span4" type="text" name="picture" placeholder="http://www.example.com/logo.png">
+		    			    	
+		    			    	<label>Media URL <small class="muted">swf or mp3</small></label>
+		    			    	<input class="span4" type="text" name="source" placeholder="http://www.example.com/video.swf">
+		    			    	
+		    			    	<label>Post Description</label>
+		    			    	<textarea name="description" class="span6" rows="3"></textarea>
+					
+		    			    </fieldset>
+		    			    <a rel="facebook" href="#" target="_blank" class="btn btn-inverse disabled">Facebook Share URL</a>
+		    			    <a href="https://developers.facebook.com/docs/reference/dialogs/feed/" target="_blank" class="btn">Documentation</a>
+		    			</form>
+		    		</div>
+		    		<div class="tab-pane" id="tab2">
+		    			<form id="twitter">
+		    			    <fieldset>
+		    			    
+		    			    	<label>Page URL*</label>
+		    			    	<input class="span4" type="text" name="url" placeholder="http://www.example.com">
+		    			    	
+		    			    	<label>Tweet Text*</label>
+		    			    	<textarea name="text" class="span6" rows="3"></textarea>
+		
+		    			    	<label>Hashtags <small class="muted">comma-separated list, no spaces, no hashes (#)</small></label>
+		    			    	<input type="text" name="hashtags" class="span6">
+		
+		    			    </fieldset>
+		    			    <a rel="twitter" href="#" target="_blank" class="btn btn-inverse disabled">Twitter Share URL</a>
+		    			    <a href="https://dev.twitter.com/docs/intents" target="_blank" class="btn">Documentation</a>
+		    			</form>
+		    		</div>
+		    		<div class="tab-pane" id="tab3">
+		    			<form id="pinterest">
+		    			    <fieldset>
+		    			    
+		    			    	<label>Page URL*</label>
+		    			    	<input class="span4" type="text" name="url" placeholder="http://www.example.com">
+		    			    	
+		    			    	<label>Image URL*</label>
+		    			    	<input type="text" name="media" class="span6" placeholder="http://www.example.com/image.jpg">
+		    			    	
+		    			    	<label>Description*</label>
+		    			    	<textarea name="description" class="span6" rows="3"></textarea>
+		
+		    			    </fieldset>
+		    			    <a rel="pinterest" href="#" target="_blank" class="btn btn-inverse disabled">Pinterest Share URL</a>
+		    			    <a href="http://pinterest.com/about/goodies/" target="_blank" class="btn">Documentation</a>
+		    			</form>
+		    		</div>
+		    	</div>
+		    </div>
+		
+		</div> <!-- /container -->
+	</div>
+	
+	<div id="footer">
+	    <div class="container">
+	    	<hr>
+	    	<p class="muted credit">
+	    		Copyright &copy; 2012 by <a href="http://jonathonhill.net" target="_blank">Jonathon Hill</a>
+	    	</p>
+	    </div>
+	</div>
+
+	<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		var generator =
+		{
+			facebook : function(frm)
+			{
+				return 'http://www.facebook.com/dialog/feed?' + frm.serialize();
+			},
+			twitter: function(frm)
+			{
+				return 'https://www.twitter.com/intent/tweet?' + frm.serialize();
+			},
+			pinterest: function(frm)
+			{
+				return 'http://www.pinterest.com/pin/create/button/?' + frm.serialize();
+			}
+		};
+		
+		$(function()
+		{
+			$('form').each(function()
+			{
+				var frm = $(this);
+				var network = frm.attr('id');
+				var btn = $('a[rel='+network+']');
+				
+				var update_share_url  = function(e)
+				{
+					e.preventDefault();
+					btn.attr('href', generator[network](frm));
+					if (btn.hasClass('disabled'))
+					{
+						btn.removeClass('disabled');
+					}
+				};
+				
+				$(this).submit(update_share_url);
+				$(this).find(':input').bind({
+					keyup  : update_share_url,
+					change : update_share_url
+				})
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36858680-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
